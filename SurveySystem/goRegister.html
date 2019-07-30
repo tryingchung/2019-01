@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心——注册</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body {
+			background: url('img/back1.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% auto;
+			vertical-align: middle;
+		}
+
+		.con {
+			background-color: white;
+			background: rgba(255, 255, 255, 0.2) !important;
+			/* filter: alpha(opacity=30); */
+			border-radius: 20px;
+			color: white;
+			margin: 20px;
+			padding: 30px;
+			line-height: 30px;
+			font-family: 'Microsoft YeHei';
+		}
+
+		h1 {
+			font-family: 'Microsoft YeHei';
+			font-weight: bolder;
+			color: white;
+			margin: 0 auto;
+		}
+
+		label {
+			font-size: 23px;
+			font-family: 'Microsoft YeHei';
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			line-height: 30px;
+			width: 200px;
+			border-radius: 5px;
+			border: 1px solid;
+			border-color: white;
+			padding-left: 10px;
+			font-size: 14px;
+			color: dimgray;
+		}
+
+		#goIndex {
+			text-decoration: none;
+			font-weight: bolder;
+			font-size: 20px;
+			color: white;
+			font-family: 'Microsoft YeHei';
+		}
+
+		#toLogin {
+			text-decoration: none;
+			font-weight: normal;
+			font-size: 20px;
+			color: blue;
+		}
+
+		.span_form {
+			/* color: dimgray; */
+			font-size: 16px;
+			font-family: '宋体';
+			font-weight: normal;
+			text-align: right;
+			width: 150px;
+			line-height: 35px;
+			display: inline-block;
+		}
+
+		span {
+			font-family: '宋体';
+		}
+		/* #div2{
+			width: 450px;
+			float: right;
+			display: none;
+		} */
+		.span_form i {
+			color: red;
+		}
+
+		label {
+			display: inline-block;
+			cursor: pointer;
+			font-size: 16px;
+			font-family: '宋体';
+			font-weight: normal;
+		}
+
+		.redtext {
+			color: red;
+		}
+
+		.bluetext {
+			color: blue;
+		}
+
+		.greentext {
+			color: green;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function checkID() {
+			document.getElementById("id-tips").innerHTML = "检测中……";
+			document.getElementById("id-tips").className = "bluetext";
+			var unn = document.getElementById("user").value;
+			unn = unn.replace(/^\s*|\s*$/g, "");
+			if (unn == "") {
+				document.getElementById("id-tips").innerHTML = '<img src="img/err.png"> ID不能为空';
+				document.getElementById("id-tips").className = "redtext";
+				return false;
+			} else {
+				var xhr = new XMLHttpRequest();
+				xhr.onload = function() {
+					return show(xhr);
+				}
+				var un = document.getElementById("user").value;
+				xhr.open("GET", "checkRegister.php?user=" + un, true);
+				xhr.send();
+			}
+		}
+
+		function show(xhr) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				if (xhr.responseText == 1) {
+					document.getElementById("id-tips").innerHTML = '<img src="img/ok.png">';
+					document.getElementById("id-tips").className = 'greentext';
+					return true;
+				} else {
+					document.getElementById("id-tips").innerHTML = '<img src="img/err.png"> 此ID已注册';
+					document.getElementById("id-tips").className = 'redtext';
+					return false;
+				}
+			}
+		}
+
+		function checkName() {
+			var uname = document.getElementById("userName").value;
+			uname = uname.replace(/^\s*|\s*$/g, "");
+			if (uname == "") {
+				document.getElementById("name-tips").innerHTML = '<img src="img/err.png"> 名字不能为空';
+				document.getElementById("name-tips").className = 'redtext';
+				return false;
+			} else {
+				document.getElementById("name-tips").innerHTML = '<img src="img/ok.png">';
+				document.getElementById("name-tips").className = 'greentext';
+				return true;
+			}
+		}
+
+		function checkP1() {
+			//不能为空 且6-11位
+			var pss = document.getElementById("pswd1").value;
+			pss = pss.replace(/^\s*|\s*$/g, "");
+			if (pss == "") {
+				document.getElementById("psd-tips").innerHTML = '<img src="img/err.png"> 密码不能为空';
+				document.getElementById("psd-tips").className = 'redtext';
+				return false;
+			} else if (pss.length < 6 || pss.length > 15) {
+				document.getElementById("psd-tips").innerHTML = '<img src="img/err.png"> 长度为6-15位';
+				document.getElementById("psd-tips").className = 'redtext';
+				return false;
+			} else {
+				document.getElementById("psd-tips").innerHTML = '<img src="img/ok.png">';
+				document.getElementById("psd-tips").className = 'greentext';
+				return true;
+			}
+		}
+
+		function checkP2() {
+			// 不能为空 且psd1一致
+			var pss2 = document.getElementById("pswd2").value;
+			var pss1 = document.getElementById("pswd1").value;
+			pss2 = pss2.replace(/^\s*|\s*$/g, "");
+			if (pss2 == "") {
+				document.getElementById("psd2-tips").innerHTML = '<img src="img/err.png"> 密码不能为空';
+				document.getElementById("psd2-tips").className = 'redtext';
+				return false;
+			} else if (pss2 != pss1) {
+				document.getElementById("psd2-tips").innerHTML = '<img src="img/err.png"> 密码不一致';
+				document.getElementById("psd2-tips").className = 'redtext';
+				return false;
+			} else {
+				document.getElementById("psd2-tips").innerHTML = '<img src="img/ok.png">';
+				document.getElementById("psd2-tips").className = 'greentext';
+				return true;
+			}
+		}
+		// function show () {
+		// 	var xhr = new XMLHttpRequest();
+  //           xhr.onload = function(){
+  //               if(xhr.status==200){
+  //                   document.getElementById("div2").innerHTML = xhr.responseText; 
+  //                   document.getElementById("div2").style.display = 'inline-block';  
+  //               }
+  //           };
+  //           var myform = document.getElementById("form-register");
+  //           var data = new FormData(myform);
+  //           xhr.open("POST","getRegister.php",true);
+  //           xhr.send(data);
+		// }
+
+		function checkForm() {
+			if(checkName()&&checkP1()&&checkP2()){
+				return true;
+			}else{
+				return false;
+			}           
+		}
+
+	</script>
+</head>
+
+<body>
+	<div style="margin-left: 50px; margin-top: 30px;">
+		<a href="index.html" id="goIndex" class="text-left">
+			<span class="glyphicon glyphicon-menu-left"></span>
+			返回首页
+		</a>
+	</div>
+	<div class="con container " style="width: 600px;margin: 0px auto;padding: 5px;">
+		<h3 class="text-center"><span class="glyphicon glyphicon-user"></span> 用户注册&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+		<div class="con" style="background: rgba(255, 255, 255, 0.3) !important;">
+			<form id="form-register" onsubmit="return checkForm();"  method="POST" action="getRegister.php" class="form-horizontal" role="form">
+				<!-- onclick="getRegister()"-->
+				<p>
+					<label for="user">
+						<span class="span_form"><i>* </i>用户ID：</span>
+					</label>
+					<input type="text" id="user" name="user" placeholder="请输入id号用来登录系统" onblur="checkID()" ><!---->
+					<span id="id-tips"></span>
+				</p>
+				<p>
+					<label for="userName">
+						<span class="span_form"><i>* </i>用户名：</span>
+					</label>
+					<input type="text" name="userName" id="userName" placeholder="请输入您的用户名" onblur="checkName()"><!--  -->
+					<span id="name-tips"></span>
+				</p>
+				<p>
+					<label for="pswd1">
+						<span class="span_form"><i>* </i>密码：</span>
+					</label>
+					<input type="password" name="pswd1" id="pswd1" placeholder="请输入6-15位的密码" onblur="checkP1()"><!--  -->
+					<span id="psd-tips"></span>
+				</p>
+				<p>
+					<label for="pswd2">
+						<span class="span_form"><i>* </i>确认密码：</span>
+					</label>
+					<input type="password" name="pswd2" id="pswd2" placeholder="请再次输入密码" onblur="checkP2()"><!-- -->
+					<span id="psd2-tips"></span>
+				</p>
+				<div class="">
+					<label>
+						<span class="span_form">性别：</span>
+					</label>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" class="radio radio-info radio-inline" name="gender" value="male"><span></span>男</label>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label><input type="radio" class="radio radio-info radio-inline" name="gender" value="female"><span></span>女</label>
+				</div>
+				<p>
+					<label for="telphone">
+						<span class="span_form">手机号：</span>
+					</label>
+					<input type="text" name="telphone" placeholder="请输入您的手机号" id="telphone">
+				</p>
+				<p>
+					<label for="realName">
+						<span class="span_form">真实姓名：</span>
+					</label>
+					<input type="text" name="realName" placeholder="输入您的真实姓名" id="realName">
+				</p>
+				<div class="text-center">
+					<button type="submit" id="btn-reg" class="btn btn-primary" style="font-size: 18px;" >注册</button>
+				</div>
+				<div class="text-right">
+					<a id="toLogin" href="goLogin.html">[返回登录页面]</a>
+				</div>
+			</form>
+		</div>
+	</div>
+<!-- 	<div class="con" id="div2" style="padding:0px;background-color:#ffc;border: 1px double;"></div> -->
+</body>
+
+</html>

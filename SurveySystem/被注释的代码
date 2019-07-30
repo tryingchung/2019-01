@@ -1,0 +1,266 @@
+ ==========个人中心——我的账号================================================================================================ -->
+<!-- 	<div id="div-personal" class="div-con">
+		<div class="container" style="background-color: white;padding: 0px;">
+			<div class="div-PersonalImage">
+				<img src="img/ss2.jpg" alt="" style="width: 100%;height: 300px;margin-bottom: 20px;">
+			</div>
+			<div class="div-tab" >-->	
+				<!-- 标签页 -->
+				<!-- <ul id="ul-tabs" class="nav nav-pills nav-stacked pull-left text-center" style="height: 1000px;margin-top: 50px;padding-left: 20px;">
+				    <li role="presentation" class="active"><a href="#tab-Msg" data-toggle="tab">账号信息</a></li>
+				    <li class="divider"></li>
+				    <li role="presentation"><a href="#tab-mypapers" data-toggle="tab">我的问卷</a></li>
+				    <li role="presentation"><a href="#tab-help" data-toggle="tab">帮助</a></li>
+				</ul> -->
+				<!-- 标签对应板块 -->
+<!-- 				<div id="div-tabsContent" class="tab-content"> -->
+					<!-- ============我的账号信息==================================================================== -->
+				   <!--  <div class="tab-pane fade in active" id="tab-Msg" style="padding: 20px 300px;">
+				        <h2 class="text-center" style="font-family: '黑体';">我的账号信息</h2>
+				        <br>
+				        <p>
+				        	<div class="col-sm-6 labelMsg text-right" >我的用户ID：</div>
+				        	<div id="myID" class="col-sm-6"></div><br>
+				        </p>
+				        <br>
+				        <p>
+				        	<div class="col-sm-6 labelMsg text-right">我的用户名：</div>
+				        	<div id="myname" class="col-sm-6"></div><br>
+				        </p>
+				        <br>
+				        <p>
+				        	<div class="col-sm-6 labelMsg text-right">我的手机号：</div>
+				        	<div id="mytel" class="col-sm-6"></div><br>
+				        </p>
+				        <br>
+				        <p>
+				        	<div class="col-sm-6 labelMsg text-right">性别：</div>
+				        	<div id="mysex" class="col-sm-6"></div><br>
+				        </p>
+				        <br>
+				        <p >
+				        	<div class="col-sm-6 labelMsg text-right">真实姓名：</div>
+				        	<div id="myrealname" class="col-sm-6"></div><br><br><br><br><br><br><br>
+				        </p>				        
+				    </div> -->
+				    <!-- ===============我的问卷====================================================================== -->
+				    <!-- <div class="tab-pane fade" id="tab-mypapers" style="padding: 20px 300px;">
+				        <h3 class="text-center">我的问卷</h3>
+
+				    </div> -->
+				    <!-- ==========帮助=========================================================== -->
+		<!-- 		    <div class="tab-pane fade" id="tab-help" style="padding: 20px 300px;">
+				        <h3 class="text-center"></h3>
+				    </div>			    
+				</div>
+				<script>
+				    $(function () {
+				        $('#ul-tabs li:eq(0) a').tab('show');
+				    });
+				</script>
+			</div>
+		</div>
+			
+
+	</div> --> 
+<!-- ==========调查中心================================================================================================ -->
+	<!-- <div id="div-paperlist" class="container div-con">
+		
+	</div> -->
+<!-- ==========其他================================================================================================ -->	
+	<!-- <div id="div-other" class="container div-con">
+		
+	</div> -->
+<!-- =========新建调查======================================================================================================== -->
+	<!-- <div id="div-creatSurvey" class="container div-con">
+	</div> -->
+	<!-- <script type="text/javascript" src="js/myJS.js"></script> -->
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- 显示登录界面的模态框 -->
+	<!-- <form method="post" action="toLogin()" class="form-horizontal" role="form" id="form-login">
+		<div class="modal fade" id="myLoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="width: 400px;margin:100px auto;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">用户登录</h4>
+					</div> -->
+					<!-- style="margin: 20px auto;height: 100px; line-height: 30px;" -->
+					<!-- <div class="modal-body" >
+						<form action="" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="user" class="col-sm-3 control-label" style="">用户ID</label>
+								<div class="col-sm-6">
+									<input type="text" id="user" name="user" class="form-control">
+								</div>
+								<div class="col-sm-3" id="use-tip"></div>
+							</div>
+							<div class="form-group">
+								<label for="pswd" class="col-sm-3 control-label" style="font-size: 18px;font-weight: normal;font-family: '微软雅黑';">密码</label>
+								<div class="col-sm-6">
+									<input type="password" id="pswd" name="pswd" class="form-control">
+								</div>
+								<div class="col-sm-3" id="ps-tip"></div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="btn-login" data-dismiss="modal">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form> -->
+	<!-- 显示注册的模态框 -->
+	<!-- <form method="post" action="register.php" class="form-horizontal" id="form-register">
+		<div class="modal fade" id="myRegisterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myRegLabel">用户注册</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="newuser" class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>用户ID：</label>
+								<div class="col-sm-8"><input type="text" id="newuser" name="newuser" class="form-control"></div>
+							</div>
+							<div class="form-group">
+								<label for="newusername" class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>用户名：</label>
+								<div class="col-sm-8"><input type="text" id="newusername" name="newusername" class="form-control"></div>
+							</div>
+							<div class="form-group">
+								<label for="telphone" class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>手机号：</label>
+								<div class="col-sm-8"><input type="text" id="telphone" name="telphone" class="form-control"></div>
+							</div>
+							<div class="form-group">
+								<label for="newpswd" class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>密码：</label>
+								<div class="col-sm-8"><input type="password" id="newpswd" name="newpswd" class="form-control"></div>
+							</div>
+							<div class="form-group">
+								<label for="newpswd2" class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>确认密码：</label>
+								<div class="col-sm-8"><input type="password" id="newpswd2" name="newpswd2" class="form-control"></div>
+							</div>
+							<div class="form-group">
+								<label  class="col-sm-4 control-label text-right labelcss"><i style="color: red;">*&nbsp;</i>性别：</label>
+								<div class="col-sm-3 text-center radio radio-info radio-inline" style="line-height: 20px;">
+									<input type="radio" id="maleRadio" name="sex" value="male" class="radio-inline"><label for="maleRadio">男</label>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="radio" id="femaleRadio" name="sex" value="female" class="radio-inline"><label for="femaleRadio">女</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="realname" class="col-sm-4 control-label text-right labelcss">真实姓名：</label>
+								<div class="col-sm-8"><input type="text" id="realname" class="form-control"></div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-primary">注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form> -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!--                <ul class="nav navbar-nav navbar-right">-->
+<!---->
+<!--                	<li id="showusername" class="navbar-btn">&nbsp;</li>-->
+<!--                	<li >&nbsp;</li>-->
+<!--                	<li id="quit" class="navbar-btn">&nbsp;</li>-->
+<!--                    --><?php
+//                        if(!isset($_COOKIE['usermsg'])){
+//                           <!--  echo '<li id="li-login"> -->
+//                                <!-- <a href="" data-toggle="modal" data-target="#myLoginModal"><span class="glyphicon glyphicon-log-in"></span> 登录</a> -->
+//                                <!-- <button class="btn btn-info text-center navbar-btn" data-toggle="modal" data-target="#myLoginModal">
+//                                    <span class="glyphicon glyphicon-log-in"></span>
+//                                    登录
+//                                </button>
+//                            </li>
+//                            <li>&nbsp;</li>
+//                            <li id="li-register"> -->
+//                                <!-- <a href="" data-toggle="modal" data-target="#myRegisterModal"><span class="glyphicon glyphicon-user"></span> 注册</a> -->
+//                                <!-- <button class="btn btn-info text-center navbar-btn" data-toggle="modal" data-target="#myRegisterModal">
+//                                    <span class="glyphicon glyphicon-user"></span>
+//                                    注册
+//                                </button>
+//                            </li>
+//                            <li>&nbsp;</li>'; -->
+//                     }
+//                    ?>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!--                </ul>-->
+
+<!--	<script type="text/javascript">-->
+<!--		window.onload = function(){-->
+<!--			document.getElementById("btn-login").onclick = toLogin;-->
+<!--		}-->
+<!---->
+<!--		function toLogin(){-->
+<!--			var xhr = new XMLHttpRequest();-->
+<!--			xhr.onload = function() {-->
+<!--				if (xhr.readyState==4 && xhr.status==200){-->
+<!--					var obj = JSON.parse(xhr.responseText);-->
+<!--					loginSuccess(obj);-->
+<!--					// alert(xhr.responseText);-->
+<!--				}-->
+<!--			}-->
+<!--			var form_login = document.getElementById("form-login");-->
+<!--			var data = new FormData(form_login);-->
+<!--			xhr.open("POST", "login.php", true);-->
+<!--			xhr.send(data);-->
+<!--			//=========================================================-->
+<!--   -->
+<!--		}-->
+<!--		function loginSuccess(dataMsg) {-->
+<!--			 var msg = dataMsg.msg;-->
+<!--			// alert(dataMsg.reg + "；欢迎您，"+msg.username);-->
+<!--			document.getElementById("li-login").style.display = 'none';-->
+<!--			document.getElementById("li-register").style.display = 'none';-->
+<!--			-->
+<!--                //require 'forLogin.php';-->
+<!--                //setcookie('usermsg',$userMsg,time()+300);-->
+<!--               // setcookie('username',$userMsg['username'],time()+300);-->
+<!--           -->
+<!--			document.getElementById("showusername").innerHTML = "欢迎您，"+msg.username;-->
+<!--			document.getElementById("quit").innerHTML = "退出";-->
+<!--		}-->
+<!---->
+<!--		-->
+<!--	</script>-->
+<!--</head>-->
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ // <?php
+                           //      $Msg = array();
+                           //      $Msg['name'] = $_REQUEST['newName'];
+                           //      $Msg['phone'] = $_REQUEST['newPhone'];
+                           //      $Msg['gender'] = $_REQUEST['newGender'];
+                           //      $Msg['real'] = $_REQUEST['newReal'];
+
+                           //      $sqll = sprintf("UPDATE `user` SET UserName = '%s',telphone = '%s',gender = '%s',realname = '%s' WHERE UserID = '%s'",$Msg['name'],$Msg['phone'],$Msg['gender'],$Msg['real'],$userMsg['userID']);
+
+                           //      $res = $mysqli->query($sqll);
+
+                           //      if ($mysqli->affected_rows == 1) {
+                           //          echo '$("#myName").empty();
+                           //              $("#myPhone").empty();
+                           //              $("#myGender").empty();
+                           //              $("#myReal").empty();'; 
+                           //          $ssql = sprintf("SELECT * FROM `user` WHERE UserID='%s'",$userMsg['userID']);
+                           //          $rr = $mysqli->query($ssql);
+                           //          if ($rr && $rr->num_rows>0) {
+                           //              $rw = $rr->fetch_array();
+                           //              echo '$("#myName").html(',$rw['UserName'],');
+                           //              $("#myPhone").html(',$rw['telphone'],');
+                           //              $("#myGender").html(',$rw['gender'],');
+                           //              $("#myReal").html(',$rw['realname'],');';
+                           //          }
+                           //      }
+                           //  ?>
